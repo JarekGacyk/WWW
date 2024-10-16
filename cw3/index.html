@@ -1,0 +1,57 @@
+<!DOCTPYE html>
+<html lang="pl">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="Author" content="Jan Kowalski" />
+    <title>Największe budynki świata</title>
+    <link rel="stylesheet" href="styles.css">
+	<script src="kolorujtlo.js" defer></script>
+	<script src="timedate.js" defer></script>
+</head>
+<body onload="startclock()">
+<FORM METHOD="POST" NAME="background">
+    <INPUT TYPE="button" VALUE="żółty" ONCLICK="changeBackground('#FFF000')">
+    <INPUT TYPE="button" VALUE="czarny" ONCLICK="changeBackground('#000000')">
+    <INPUT TYPE="button" VALUE="biały" ONCLICK="changeBackground('#FFFFFF')">
+    <INPUT TYPE="button" VALUE="zielony" ONCLICK="changeBackground('#00FF00')">
+    <INPUT TYPE="button" VALUE="niebieski" ONCLICK="changeBackground('#0000FF')">
+    <INPUT TYPE="button" VALUE="pomarańczowy" ONCLICK="changeBackground('#FF8000')">
+    <INPUT TYPE="button" VALUE="szary" ONCLICK="changeBackground('#C0C0C0')">
+    <INPUT TYPE="button" VALUE="czerwony" ONCLICK="changeBackground('#FF0000')">
+</FORM>
+
+<header>
+    <h1>Największe Budynki Świata</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="historia.html">Historia Budownictwa</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="ciekawostki.html">Ciekawostki</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <h2>Witamy na mojej stronie</h2>
+    <p>Na tej stronie znajdziesz informacje o największych budynkach świata. Dowiedz się więcej o ich historii, zobacz galerię oraz ciekawe fakty na temat tych niesamowitych konstrukcji.</p>
+    <div style="display: flex; gap: 10px; margin-top: 20px;">
+        <img src="glowna1.jpg" alt="Wieżowiec 1" width="400" height="600">
+        <img src="glowna2.jpg" alt="Wieżowiec 2" width="400" height="600">
+        <img src="glowna3.jpg" alt="Wieżowiec 3" width="400" height="600">
+    </div>
+	<div>
+			Data: <span id="data"></span>
+	</div>
+	<div>
+			Czas: <span id="zegarek"></span>
+	</div>
+
+
+</body>
+<footer>
+    <p>08.10.2024 Jarek Gacyk</p>
+</footer>
+</html>

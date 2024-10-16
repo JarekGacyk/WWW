@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="Author" content="Jan Kowalski" />
+    <title>Ciekawostki</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Ciekawostki</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="historia.html">Historia Budownictwa</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="ciekawostki.html">Ciekawostki</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Ciekawe fakty o największych budynkach</h2>
+        <p>Wiesz, że najwyższy budynek na świecie to <b>Burdż Chalifa</b>, który ma aż <i>828 metrów wysokości</i>? Burdż Chalifa znajduje się w <u>Dubaju</u> i jest nie tylko najwyższą wieżą, ale również symbolem nowoczesnego budownictwa i architektonicznej doskonałości. Budowa Burdż Chalifa rozpoczęła się w 2004 roku, a zakończyła w 2010 roku. Wieżowiec posiada <span style="font-weight:bold;">163 piętra</span>, a jego szczyt jest widoczny nawet z odległości kilkudziesięciu kilometrów. Jest to jeden z największych cudów współczesnej inżynierii.</p>
+        <div style="display: flex; gap: 10px; margin-top: 20px;">
+            <img src="ciekawostki1.jpg" alt="Burdż Chalifa w dzień" width="400">
+            <img src="ciekawostki2.jpg" alt="Burdż Chalifa nocą" width="400">
+        </div>
+        <div class="test-block" >
+            blok testowy
+        </div>
+        <div id="animacjatestowal" class="test-block">Kliknij, a się powiększę</div>
+        <div id="animacjaTestowa2" class="test-block">
+            Najedź kursorem, a się powiększę
+        </div>
+        <div id="animacjaTestowa3" class="test-block" >
+            Klikaj, abym urósł
+        </div>
+
+    </main>
+
+    <footer>
+    <p>08.10.2024 Jarek Gacyk</p>
+</footer>
+
+    <script>
+        $("#animacjatestowal").on("click", function(){
+            $(this).animate({
+                width: "500px",
+                opacity: 0.4,
+                fontSize: "3em",
+                borderWidth: "10px"
+            }, 1500);
+        });
+    </script>
+    <script>
+        $("#animacjaTestowa2").on({
+            mouseover: function() {
+                $(this).animate({
+                    width: 300
+                }, 800);
+            },
+            mouseout: function() {
+                $(this).animate({
+                    width: 200
+                }, 800);
+            }
+        });
+    </script>
+    <script>
+        $("#animacjaTestowa3").on("click", function() {
+            if (!$(this).is(":animated")) {
+                $(this).animate({
+                    width: "+=50",
+                    height: "+=10",
+                    opacity: "+=0.1"
+                }, {
+                    duration: 3000 // Inny sposób deklaracji czasu trwania animacji
+                });
+            }
+        });
+    </script>
+
+
+
+
+
+</body>
+</html>
